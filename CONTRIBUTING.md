@@ -1,6 +1,6 @@
 # Not working directly with the data
 
-Don't know how to use MongoDB? Just don't want to? That's ok! You can [submit an issue]() with `[DATA]` in the title and your suggested change in the body. If you're submitting a suggested change to an entitiy's stances on issues, please include a source or at the very least an explanation for your reasoning.
+Don't know how to use MongoDB? Just don't want to? That's ok! You can [submit an issue](https://github.com/dospunk/politinfluence_data/issues/new) with `[DATA]` in the title and your suggested change in the body. If you're submitting a suggested change to an entitiy's stances on issues, please include a source or at the very least an explanation for your reasoning.
 
 # Working directly with the data
 
