@@ -1,5 +1,7 @@
 # Style Guide For Database Entires
 
+**_Warning: this document is currently not of the highest priority to the project, and therefore may be out of date, incomplete, or both_**
+
 ## People
 
 This collection contains data about politicians
@@ -21,12 +23,13 @@ This collection contains data about politicians
 - Must be capitalized
 
 Example: 
-
+```JSON
     {
        first: "John",
        middle: "Hardy",
        last: "Isakson"
     }
+```
 
 #### Party
 - Must be a String containng the name of the political party the person belongs to
@@ -66,7 +69,7 @@ Example: State Governer
 - Every other key should be the [name of an issue](https://github.com/dospunk/politinfluence/blob/master/issues.md) and should represent another Object containing at least `{ pro: 0, anti: 0 }`
 
 Example: 
-
+```JSON
     {
        total: 5000,
        'Big Business': {
@@ -78,6 +81,7 @@ Example:
          anti: 40
        }
     }
+```
 
 #### Votes
 - Must be an Object containing
@@ -86,11 +90,12 @@ Example:
         - The 'y' or 'n' must be lowercase
 
 Example:
-
+```JSON
     {
        bill: ObjectId("123a456bcdefg7890h12345i"),
        yn: 'y'
     }
+```
 
 #### \_id
 - Must be an ObjectID
@@ -124,15 +129,23 @@ Example: Bas Group, LLC
 Example: http://www.target.com/
 
 #### Issues
-- Must be an Object where the keys are names of relevant [issues](https://github.com/dospunk/politinfluence/blob/master/issues.md) and the values are Strings containing the entity's position on the corresponding subject
+- Must be an Object where the keys are names of relevant [issues](https://github.com/dospunk/politinfluence/blob/master/issues.md) and the values are Objects containing the entity's position on the issue and evidence of that position
     - The values must be [`pro`, `ppro`, `anti`, or `panti`](https://github.com/dospunk/politinfluence/blob/master/issues.md#pro-ppro-anti-and-panti) and must be all lowercase
+    - If the evidence is a link, it should be formatted as an HTML <a> tag. 
 
 Example:
-
+```JSON
     {
-       'Big Business': "panti",
-       'Environment': "pro"
+       'Big Business': {
+          pos: "anti",
+          res: "<a href="[link to statement from entity]">click here</a>"
+       },
+       'Environment': {
+          pos: "ppro",
+          res: "entity sources materials from sustainable providers"
+       }
     }
+```
 
 #### \_id
 - Must be an ObjectID
