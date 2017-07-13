@@ -159,19 +159,32 @@ Example: ObjectId("591a259ddbcdf7492c67139a")
 - \_id
 
 #### Amount
+- Must be a non-zero Integer or Double representing the amount of money donated
+
+Example: 500
 
 #### Date
+- Must be a String representing the date of the donation in the form YYYY/MM/DD
+
+Example: 2017/07/13
 
 #### To
+- Must be the \_id of the person who the donation was made to
+- Since all donations are technically made to a comittee, a donation is considered to be made to a person if it is made to their official comittee as listed on the [fec website](https://www.fec.gov/data/)
+
+Example: ObjectID("728h927jjjjjj8888u99999i")
 
 #### From
+- Must be the \_id of the entity that made the donation
+
+Example: ObjectID("728h927jjjjjj8088u99999i")
 
 #### \_id
 - Must be an ObjectID
 - Assigned by MongoDB
 - **DO NOT CHANGE THIS UNDER ANY CIRCUMSTANCES.**
 
-Example: ObjectId("591a259ddbcdf7492c67139a")
+Example: ObjectID("591a259ddbcdf7492c67139a")
 
 ## Bills
 ### Fields
@@ -181,13 +194,13 @@ Example: ObjectId("591a259ddbcdf7492c67139a")
 - issues
 - \_id
 
-#### name
+#### Name
 
-#### date
+#### Date
 
-#### desc
+#### Desc
 
-#### issues
+#### Issues
 
 #### \_id
 - Must be an ObjectID
