@@ -23,13 +23,12 @@ This collection contains data about politicians
 - Must be capitalized
 
 Example: 
-```JSON
+
     {
        first: "John",
        middle: "Hardy",
        last: "Isakson"
     }
-```
 
 #### Party
 - Must be a String containng the name of the political party the person belongs to
@@ -69,7 +68,7 @@ Example: State Governer
 - Every other key should be the [name of an issue](https://github.com/dospunk/politinfluence/blob/master/issues.md) and should represent another Object containing at least `{ pro: 0, anti: 0 }`
 
 Example: 
-```JSON
+
     {
        total: 5000,
        'Big Business': {
@@ -81,7 +80,6 @@ Example:
          anti: 40
        }
     }
-```
 
 #### Votes
 - Must be an Object containing
@@ -90,12 +88,11 @@ Example:
         - The 'y' or 'n' must be lowercase
 
 Example:
-```JSON
+
     {
        bill: ObjectId("123a456bcdefg7890h12345i"),
        yn: 'y'
     }
-```
 
 #### \_id
 - Must be an ObjectID
@@ -134,7 +131,7 @@ Example: http://www.target.com/
     - If the evidence is a link, it should be formatted as an HTML <a> tag. 
 
 Example:
-```JSON
+
     {
        'Big Business': {
           pos: "anti",
@@ -145,7 +142,6 @@ Example:
           res: "entity sources materials from sustainable providers"
        }
     }
-```
 
 #### \_id
 - Must be an ObjectID
